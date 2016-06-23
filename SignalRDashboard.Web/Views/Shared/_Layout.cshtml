@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignalR Dashboard</title>
+    @Styles.Render("~/Content/css")
+
+</head>
+<body>
+<div class="container-fluid body-content">
+    @RenderBody()
+</div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/scripts/signalrdashboard.mapping.js")
+    @Scripts.Render("~/scripts/signalrdashboard.soundplayer.js")
+    @Scripts.Render("~/scripts/signalrdashboard.alertHandler.js")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

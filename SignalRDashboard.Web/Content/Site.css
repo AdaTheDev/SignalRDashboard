@@ -1,0 +1,139 @@
+﻿body {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    overflow: hidden;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+div.right-align-col-2 div.row > div:nth-child(2) {
+    text-align: right;
+}
+
+div.signalrdashboard-component {
+    font-size: 1.6em;
+    padding-left: 2px;
+}
+
+    div.signalrdashboard-component .component-title {
+        font-size: 1.6em;
+        font-weight: 900;
+    }
+
+     div.signalrdashboard-component .component-sub-title {
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+    div.signalrdashboard-component span.small {
+        font-size: 0.9em;
+    }
+
+    div.signalrdashboard-component span.xsmall {
+        font-size: 0.7em;
+    }
+
+    div.signalrdashboard-component span.error {
+        color: #dd0000;
+    }
+    
+    div.signalrdashboard-component span.yellow {
+        color: #E0BB00;
+    }
+
+    div.signalrdashboard-component span.warning {
+        color: #FF6A00;
+    }
+
+    div.signalrdashboard-component span.success {
+        color: #267F00;
+    }
+    
+    @keyframes pulsate-error {
+        0% {
+            background-color:rgba(221,0,0,1);
+        }
+        50% {            
+            background-color:rgba(221, 0, 0, 0.5);
+        }
+        100% {            
+            background-color:rgba(221,0,0,1);
+        }
+    }
+
+     @keyframes pulsate-warning {
+        0% {
+            background-color:rgba(255,122,13,1);
+        }
+        50% {            
+            background-color:rgba(255, 122, 13, 0.5);
+        }
+        100% {            
+            background-color:rgba(255, 122, 13 ,1);
+        }
+    }
+
+div.system-up {
+    background-color: #267F00;
+}
+
+div.signalrdashboard-component div.system-down, div.signalrdashboard-component div.error {
+    animation-name: pulsate-error;
+}
+
+div.signalrdashboard-component div.warning {
+    animation-name: pulsate-warning;
+}
+
+div.signalrdashboard-component div.system-down, div.signalrdashboard-component div.error, div.signalrdashboard-component div.warning {
+    animation-duration: 1s;
+    animation-direction: linear;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;  
+ }
+
+div.system-down {
+     animation-iteration-count: 15;
+}
+
+ div.error, div.warning {
+     animation-iteration-count: 2;
+}
+
+div.row {
+    margin-bottom: 3px;
+}
+
+div.success {
+    background-color: #267F00;
+}
+
+.right-align {
+    text-align: right;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+footer {
+    font-size: 0.8em;
+}
