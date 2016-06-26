@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{655116DF-C1D3-4EF7-BC92-F9D9B2075F17}</ProjectGuid>
+    <ProjectGuid>{CBCAEB01-5574-45D8-9BB3-06FF3ADB43B0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SignalRDashboard.Data.Core</RootNamespace>
-    <AssemblyName>SignalRDashboard.Data.Core</AssemblyName>
+    <RootNamespace>SignalRDashboard.Data.Demo</RootNamespace>
+    <AssemblyName>SignalRDashboard.Data.Demo</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -60,23 +60,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConnectedUsersTracker.cs" />
-    <Compile Include="DataSources\IUrlPinger.cs" />
-    <Compile Include="Extensions\TimespanExtensions.cs" />
-    <Compile Include="Hubs\ConnectedUsersHub.cs" />
-    <Compile Include="Hubs\Models\ConnectedUsers.cs" />
-    <Compile Include="Hubs\IHubUserConnectionTrackingStrategy.cs" />
-    <Compile Include="Hubs\Models\ModelBase.cs" />
-    <Compile Include="Hubs\HubBase.cs" />
-    <Compile Include="Hubs\TrackConnectedUsersStrategy.cs" />
-    <Compile Include="Pollers\DatasourcePoller.cs" />
-    <Compile Include="Pollers\IPollDependingOnConnectedUsersStrategy.cs" />
-    <Compile Include="Pollers\PollOnlyWhenUsersAreConnectedStrategy.cs" />
-    <Compile Include="Pollers\PollWhereUsersAreConnectedOrNotStrategy.cs" />
+    <Compile Include="DataSources\DummyUrlPinger.cs" />
+    <Compile Include="Hubs\DemoSiteStatusHub.cs" />
+    <Compile Include="Hubs\Models\SiteStatus.cs" />
+    <Compile Include="Hubs\Models\SiteStatuses.cs" />
+    <Compile Include="Pollers\DemoSiteStatusPoller.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SignalRDashboard.Data.Core\SignalRDashboard.Data.Core.csproj">
+      <Project>{655116df-c1d3-4ef7-bc92-f9d9b2075f17}</Project>
+      <Name>SignalRDashboard.Data.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DataSources\Models\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,0 +1,16 @@
+<div class="signalrdashboard-component">
+    <div class="row">
+        <div class="col-lg-12 component-title">
+            Site Status
+        </div>
+    </div>
+    <div *ngFor="#site of model" class="row">
+        <div class="col-lg-12 ">
+            <div class="big-box" [class.success]="site.isSiteUp" [class.error-long]="!site.isSiteUp">
+                {{site.siteName}}
+                <br/>
+                <span class="xsmall">{{site.url}}</span>
+            </div>
+        </div>
+    </div>
+</div>

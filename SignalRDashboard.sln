@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRDashboard.Data.Core"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRDashboard.Web", "SignalRDashboard.Web\SignalRDashboard.Web.csproj", "{49FAC345-DA6C-44D1-8F5B-6578A815B19F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRDashboard.Data.Demo", "SignalRDashboard.Data.Demo\SignalRDashboard.Data.Demo.csproj", "{CBCAEB01-5574-45D8-9BB3-06FF3ADB43B0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{49FAC345-DA6C-44D1-8F5B-6578A815B19F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49FAC345-DA6C-44D1-8F5B-6578A815B19F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49FAC345-DA6C-44D1-8F5B-6578A815B19F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBCAEB01-5574-45D8-9BB3-06FF3ADB43B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBCAEB01-5574-45D8-9BB3-06FF3ADB43B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBCAEB01-5574-45D8-9BB3-06FF3ADB43B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBCAEB01-5574-45D8-9BB3-06FF3ADB43B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

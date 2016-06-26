@@ -91,11 +91,7 @@ div.signalrdashboard-component {
         }
     }
 
-div.system-up {
-    background-color: #267F00;
-}
-
-div.signalrdashboard-component div.system-down, div.signalrdashboard-component div.error {
+div.signalrdashboard-component div.error, div.signalrdashboard-component div.error-long {
     animation-name: pulsate-error;
 }
 
@@ -103,14 +99,14 @@ div.signalrdashboard-component div.warning {
     animation-name: pulsate-warning;
 }
 
-div.signalrdashboard-component div.system-down, div.signalrdashboard-component div.error, div.signalrdashboard-component div.warning {
+div.signalrdashboard-component div.error, div.signalrdashboard-component div.error-long, div.signalrdashboard-component div.warning {
     animation-duration: 1s;
     animation-direction: linear;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;  
  }
 
-div.system-down {
+div.error-long {
      animation-iteration-count: 15;
 }
 
@@ -136,4 +132,12 @@ div.success {
 
 footer {
     font-size: 0.8em;
+}
+
+.big-box {
+    font-size: 1.6em;
+    font-weight: 800;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;   
 }

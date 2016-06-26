@@ -234,10 +234,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Custom.css" />
+    <Content Include="Content\Demo.css" />
     <Content Include="Scripts\angular2-beta0\es6-shim.min.js" />
     <Content Include="Scripts\app\components\AppComponent.js" />
     <Content Include="Scripts\app\components\core\ConnectedUsersComponent.js" />
+    <Content Include="Scripts\app\components\demo\SiteStatusComponent.js" />
     <Content Include="Scripts\app\models\core\ConnectedUsers.js" />
+    <Content Include="Scripts\app\models\demo\SiteStatus.js" />
     <Content Include="Scripts\app\templates\core\ConnectedUsersComponent.html" />
     <Content Include="Scripts\app\templates\core\DashboardComponent.html" />
     <Content Include="Content\bootstrap.css" />
@@ -258,6 +261,7 @@
     <None Include="Properties\PublishProfiles\FIleSystem.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\app\dashboard.js" />
+    <Content Include="Scripts\app\templates\demo\SiteStatusComponent.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -311,6 +315,10 @@
     <ProjectReference Include="..\SignalRDashboard.Data.Core\SignalRDashboard.Data.Core.csproj">
       <Project>{655116df-c1d3-4ef7-bc92-f9d9b2075f17}</Project>
       <Name>SignalRDashboard.Data.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SignalRDashboard.Data.Demo\SignalRDashboard.Data.Demo.csproj">
+      <Project>{cbcaeb01-5574-45d8-9bb3-06ff3adb43b0}</Project>
+      <Name>SignalRDashboard.Data.Demo</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
