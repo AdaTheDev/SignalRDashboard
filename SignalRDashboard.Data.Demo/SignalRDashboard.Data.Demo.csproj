@@ -60,10 +60,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataSources\DemoSiteAnalyticsProvider.cs" />
     <Compile Include="DataSources\DummyUrlPinger.cs" />
+    <Compile Include="DataSources\ISiteAnalyticsProvider.cs" />
+    <Compile Include="DataSources\Models\SiteAnalyticsData.cs" />
+    <Compile Include="Hubs\DemoSiteStatisticsHub.cs" />
     <Compile Include="Hubs\DemoSiteStatusHub.cs" />
+    <Compile Include="Hubs\Models\SiteStatistics.cs" />
     <Compile Include="Hubs\Models\SiteStatus.cs" />
     <Compile Include="Hubs\Models\SiteStatuses.cs" />
+    <Compile Include="Pollers\DemoSiteStatisticsPoller.cs" />
     <Compile Include="Pollers\DemoSiteStatusPoller.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -76,9 +82,7 @@
       <Name>SignalRDashboard.Data.Core</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DataSources\Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

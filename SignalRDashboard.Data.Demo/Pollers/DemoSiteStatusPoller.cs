@@ -26,7 +26,7 @@ namespace SignalRDashboard.Data.Demo.Pollers
             }
         }; 
 
-        public DemoSiteStatusPoller(IHubConnectionContext<dynamic> clients)
+        private DemoSiteStatusPoller(IHubConnectionContext<dynamic> clients)
             : base(clients, TimeSpan.FromSeconds(15), new PollOnlyWhenUsersAreConnectedStrategy())
         {
             _urlPinger = new DummyUrlPinger();
