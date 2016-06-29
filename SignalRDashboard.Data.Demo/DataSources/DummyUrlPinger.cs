@@ -8,7 +8,7 @@ namespace SignalRDashboard.Data.Demo.DataSources
         private readonly Random _random = new Random();
         public bool Ping(string url)
         {
-            return _random.Next(0, 10) >= 2;
+            return _random.Next(0, 10) >= 1;
         }
     }
 }

@@ -235,10 +235,13 @@
   <ItemGroup>
     <Content Include="Content\Custom.css" />
     <Content Include="Content\Demo.css" />
+    <Content Include="Content\Sounds\DemoBuildMetrics\Success\SmallCrowdApplause.mp3" />
     <Content Include="Scripts\angular2-beta0\es6-shim.min.js" />
     <Content Include="Scripts\app\components\AppComponent.js" />
     <Content Include="Scripts\app\components\core\ConnectedUsersComponent.js" />
+    <Content Include="Scripts\app\components\demo\BuildMetricsComponent.js" />
     <Content Include="Scripts\app\components\demo\SiteStatisticsComponent.js" />
+    <Content Include="Scripts\app\models\demo\BuildMetrics.js" />
     <Content Include="Scripts\app\models\demo\SiteStatistics.js" />
     <Content Include="Scripts\app\templates\core\ControlsComponent.html" />
     <Content Include="Scripts\app\components\demo\SiteStatusComponent.js" />
@@ -265,6 +268,7 @@
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\app\dashboard.js" />
     <Content Include="Scripts\app\components\core\ControlsComponent.js" />
+    <Content Include="Scripts\app\templates\demo\BuildMetricsComponent.html" />
     <Content Include="Scripts\app\templates\demo\SiteStatisticsComponent.html" />
     <Content Include="Scripts\app\templates\demo\SiteStatusComponent.html" />
     <Content Include="Scripts\bootstrap.js" />
@@ -303,6 +307,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\Sounds\DemoBuildMetrics\Error\" />
     <Folder Include="Views\Media\" />
   </ItemGroup>
   <ItemGroup>

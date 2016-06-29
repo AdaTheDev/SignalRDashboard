@@ -1,0 +1,31 @@
+﻿<div class="signalrdashboard-component right-align-col-2">
+    <div class="row">
+        <div class="col-lg-12 component-title">
+            Build Metrics
+        </div>
+    </div>
+    <div class="row" [class.error]="!model.lastBuildSucceeded">
+        <div class="col-lg-6">Last Build</div>
+        <div class="col-lg-6">{{model.lastBuildTime}}</div>
+    </div>
+    <div class="row">
+        <div class="col-lg-7">Last Build Duration</div>
+        <div class="col-lg-5">{{model.lastBuildDuration}}</div>
+    </div>
+    <div class="row">
+        <div class="col-lg-7">Last Commit By</div>
+        <div class="col-lg-5">{{model.lastCommitBy}}</div>
+    </div>
+    <div class="row">
+        <div class="col-lg-7">
+            Tests (<span class="success">Passed</span> <span class="error">Failed</span> Total)
+        </div>
+        <div class="col-lg-5">
+            <span class="success">{{model.passedTestCount}}</span> <span class="error">{{model.failedTestCount}}</span> {{model.totalTestCount}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-7">Code Coverage</div>
+        <div class="col-lg-5">{{model.codeCoverage}}%</div>
+    </div>
+</div>

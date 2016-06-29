@@ -6,7 +6,8 @@
             directives: [signalrdashboard.core.ConnectedUsersComponent,
                 signalrdashboard.core.ControlsComponent,
                 signalrdashboard.demo.SiteStatusComponent,
-                signalrdashboard.demo.SiteStatisticsComponent
+                signalrdashboard.demo.SiteStatisticsComponent,
+                signalrdashboard.demo.BuildMetricsCompnent
             ]
           }    
       )

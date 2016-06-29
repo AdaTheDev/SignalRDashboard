@@ -60,15 +60,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataSources\DemoBuildMetricsProvider.cs" />
     <Compile Include="DataSources\DemoSiteAnalyticsProvider.cs" />
     <Compile Include="DataSources\DummyUrlPinger.cs" />
+    <Compile Include="DataSources\IBuildMetricsProvider.cs" />
     <Compile Include="DataSources\ISiteAnalyticsProvider.cs" />
+    <Compile Include="DataSources\Models\BuildMetricsData.cs" />
     <Compile Include="DataSources\Models\SiteAnalyticsData.cs" />
+    <Compile Include="Hubs\DemoBuildMetricsHub.cs" />
     <Compile Include="Hubs\DemoSiteStatisticsHub.cs" />
     <Compile Include="Hubs\DemoSiteStatusHub.cs" />
+    <Compile Include="Hubs\Models\BuildMetrics.cs" />
     <Compile Include="Hubs\Models\SiteStatistics.cs" />
     <Compile Include="Hubs\Models\SiteStatus.cs" />
     <Compile Include="Hubs\Models\SiteStatuses.cs" />
+    <Compile Include="Pollers\DemoBuildMetricsPoller.cs" />
     <Compile Include="Pollers\DemoSiteStatisticsPoller.cs" />
     <Compile Include="Pollers\DemoSiteStatusPoller.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
