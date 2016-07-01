@@ -66,10 +66,12 @@
     <Compile Include="Hubs\ConnectedUsersHub.cs" />
     <Compile Include="Hubs\Models\ConnectedUsers.cs" />
     <Compile Include="Hubs\IHubUserConnectionTrackingStrategy.cs" />
-    <Compile Include="Hubs\Models\ModelBase.cs" />
-    <Compile Include="Hubs\HubBase.cs" />
+    <Compile Include="Hubs\Models\DashboardHubModel.cs" />
+    <Compile Include="Hubs\DashboardHub.cs" />
+    <Compile Include="Hubs\PollingHub.cs" />
     <Compile Include="Hubs\TrackConnectedUsersStrategy.cs" />
     <Compile Include="Pollers\DatasourcePoller.cs" />
+    <Compile Include="Pollers\IDatasourcePoller.cs" />
     <Compile Include="Pollers\IPollDependingOnConnectedUsersStrategy.cs" />
     <Compile Include="Pollers\PollOnlyWhenUsersAreConnectedStrategy.cs" />
     <Compile Include="Pollers\PollWhereUsersAreConnectedOrNotStrategy.cs" />

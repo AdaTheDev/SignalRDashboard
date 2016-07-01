@@ -6,18 +6,16 @@ using SignalRDashboard.Data.Demo.Pollers;
 namespace SignalRDashboard.Data.Demo.Hubs
 {
     [HubName("demoSiteStatus")]
-    public class DemoSiteStatusHub : HubBase
+    public class DemoSiteStatusHub : PollingHub<SiteStatuses>
     {
-        private readonly DemoSiteStatusPoller _poller;
-
-        public DemoSiteStatusHub() : base(new TrackConnectedUsersStrategy())
+        public DemoSiteStatusHub() : base(new TrackConnectedUsersStrategy(),
+            DemoSiteStatusPoller.Instance)
         {
-            _poller = DemoSiteStatusPoller.Instance;
         }
 
         public SiteStatus[] GetDemoSiteStatus()
         {
-            return _poller.Model.GetSites;
+            return Model.GetSites;
         }
     }
 }

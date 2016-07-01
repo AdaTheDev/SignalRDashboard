@@ -2,7 +2,7 @@ using SignalRDashboard.Data.Core.Hubs.Models;
 
 namespace SignalRDashboard.Data.Demo.Hubs.Models
 {
-    public class BuildMetrics : ModelBase
+    public class BuildMetrics : DashboardHubModel
     {
         public BuildMetrics()
         {

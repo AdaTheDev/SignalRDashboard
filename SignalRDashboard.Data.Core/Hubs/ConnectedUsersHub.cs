@@ -5,7 +5,7 @@ using SignalRDashboard.Data.Core.Hubs.Models;
 namespace SignalRDashboard.Data.Core.Hubs
 {
     [HubName("connectedUsers")]
-    public class ConnectedUsersHub : HubBase
+    public class ConnectedUsersHub : DashboardHub
     {
         private readonly ConnectedUsers _stats;
         private readonly object _lockObject;

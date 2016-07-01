@@ -1,6 +1,6 @@
 ﻿namespace SignalRDashboard.Data.Core.Hubs.Models
 {
-    public class ConnectedUsers : ModelBase
+    public class ConnectedUsers : DashboardHubModel
     {
         private int _connectedUsers;
         public int NumberOfConnectedUsers

@@ -6,19 +6,17 @@ using SignalRDashboard.Data.Demo.Pollers;
 namespace SignalRDashboard.Data.Demo.Hubs
 {
     [HubName("demoBuildMetrics")]
-    public class DemoBuildMetricsHub : HubBase
+    public class DemoBuildMetricsHub : PollingHub<BuildMetrics>
     {
-        private readonly DemoBuildMetricsPoller _poller;
-
         public DemoBuildMetricsHub() 
-            : base(new TrackConnectedUsersStrategy())
+            : base(new TrackConnectedUsersStrategy(),
+                  DemoBuildMetricsPoller.Instance)
         {
-            _poller = DemoBuildMetricsPoller.Instance;
         }
 
         public BuildMetrics GetDemoBuildMetrics()
         {
-            return _poller.Model;
+            return Model;
         }
     }
 }

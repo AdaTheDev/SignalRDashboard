@@ -40,6 +40,5 @@ namespace SignalRDashboard.Data.Demo.Pollers
         {
             Clients.All.updateDemoBuildMetrics(model);
         }
-
     }
 }

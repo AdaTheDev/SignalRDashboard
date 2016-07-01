@@ -3,7 +3,7 @@ using SignalRDashboard.Data.Core.Hubs.Models;
 
 namespace SignalRDashboard.Data.Demo.Hubs.Models
 {
-    public class SiteStatus : ModelBase
+    public class SiteStatus : DashboardHubModel
     {
         private string _siteName;
         public string SiteName

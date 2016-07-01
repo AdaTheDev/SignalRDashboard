@@ -2,7 +2,7 @@
 
 namespace SignalRDashboard.Data.Demo.Hubs.Models
 {
-    public class SiteStatistics : ModelBase
+    public class SiteStatistics : DashboardHubModel
     {
         private int _visitors;
         public int Visitors

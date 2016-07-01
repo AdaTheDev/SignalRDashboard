@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 
 namespace SignalRDashboard.Data.Core.Hubs.Models
 {
-    public abstract class ModelBase : INotifyPropertyChanged
+    public abstract class DashboardHubModel : INotifyPropertyChanged
     {
         public virtual bool HasChanged { get; protected set; }
         private readonly List<string> _changedProperties = new List<string>(); 

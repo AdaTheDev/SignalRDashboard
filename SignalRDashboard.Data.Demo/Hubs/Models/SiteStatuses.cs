@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using SignalRDashboard.Data.Core.Hubs.Models;
 
 namespace SignalRDashboard.Data.Demo.Hubs.Models
 {
-    public class SiteStatuses : ModelBase, IEnumerable<SiteStatus>
+    public class SiteStatuses : DashboardHubModel, IEnumerable<SiteStatus>
     {
         public override bool HasChanged { get; protected set; }
 

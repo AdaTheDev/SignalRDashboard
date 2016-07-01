@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading;
 using Microsoft.AspNet.SignalR.Hubs;
@@ -7,9 +8,9 @@ using SignalRDashboard.Data.Core.Hubs.Models;
 
 namespace SignalRDashboard.Data.Core.Pollers
 {
-    public abstract class DatasourcePoller<TModel, THub> : IDisposable 
-        where TModel : ModelBase, new()
-        where THub : HubBase
+    public abstract class DatasourcePoller<TModel, THub> : IDisposable, IDatasourcePoller<TModel> 
+        where TModel : DashboardHubModel, new()
+        where THub : DashboardHub
     {
         private readonly TimeSpan _pollingInterval;
         private readonly IPollDependingOnConnectedUsersStrategy _connectedUsersStrategy;
@@ -17,6 +18,7 @@ namespace SignalRDashboard.Data.Core.Pollers
         private readonly Timer _timer;
         private bool _stopping;
         private readonly object _lockObject = new object();
+        private bool _didRefreshDataOnLastPoll;
 
         protected DatasourcePoller(
             IHubConnectionContext<dynamic> clients,
@@ -44,12 +46,18 @@ namespace SignalRDashboard.Data.Core.Pollers
 
                 if (_connectedUsersStrategy.CanPoll(_hubName))
                 {
+                    _didRefreshDataOnLastPoll = true;
+
                     RefreshData(Model);
 
                     if (Model.HasChanged)
                     {
                         BroadcastData(Model);
                     }
+                }
+                else
+                {
+                    _didRefreshDataOnLastPoll = false;
                 }
                 Model.ResetChangedState();
                 _timer.Change(_pollingInterval, Timeout.InfiniteTimeSpan);
@@ -60,7 +68,7 @@ namespace SignalRDashboard.Data.Core.Pollers
 
         protected abstract void BroadcastData(TModel model);
 
-        public IHubConnectionContext<dynamic> Clients { get; private set; }
+        protected IHubConnectionContext<dynamic> Clients { get; private set; }
 
         public void Dispose()
         {
@@ -73,6 +81,23 @@ namespace SignalRDashboard.Data.Core.Pollers
                 }
             }
         }
-    }
 
+        public void UserConnected()
+        {
+            lock (_lockObject)
+            {
+                // When a user connects to the hub using this poller, it could be:
+                // a) the first time a user has connected since the application started up
+                // b) the first time a user has connected after all previous users disconnected
+                // In these situations, where the  pollers only poll when users are actually connected, 
+                // we will either have no initial data (a) or the data will be stale (b), so let's give 
+                // the poller a little nudge to refresh its data immediately.
+                if (!_didRefreshDataOnLastPoll)
+                {
+                    _timer.Change(TimeSpan.FromSeconds(0), Timeout.InfiniteTimeSpan);
+                    _didRefreshDataOnLastPoll = true;
+                }
+            }
+        }
+    }
 }

@@ -32,7 +32,7 @@ namespace SignalRDashboard.Web
 
         /// <summary>
         /// Finds all assemblies in the current app domain that contain Hub Model classes that derive
-        /// from <see cref="ModelBase"/>. These models are returned to connected SignalR clients, and 
+        /// from <see cref="DashboardHubModel"/>. These models are returned to connected SignalR clients, and 
         /// we want property names to be camelCased.
         /// </summary>
         /// <returns>hashset of assemblies to include in the JsonSerializer contract resolver</returns>
@@ -42,7 +42,7 @@ namespace SignalRDashboard.Web
                 .CurrentDomain
                 .GetAssemblies()
                 .SelectMany(assembly => assembly.GetTypes())
-                .Where(type => typeof (ModelBase).IsAssignableFrom(type))
+                .Where(type => typeof (DashboardHubModel).IsAssignableFrom(type))
                 .Select(type => type.Assembly)
                 .Distinct());
         }
