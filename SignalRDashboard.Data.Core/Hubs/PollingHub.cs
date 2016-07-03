@@ -21,5 +21,10 @@ namespace SignalRDashboard.Data.Core.Hubs
             _datasourcePoller.UserConnected();
             return task;
         }
+
+        public virtual TModel GetModel()
+        {
+            return Model;
+        }
     }
 }

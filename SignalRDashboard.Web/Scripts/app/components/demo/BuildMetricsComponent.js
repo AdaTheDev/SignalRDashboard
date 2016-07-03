@@ -25,7 +25,7 @@
           initialiseData: function(connection) {
               var model = this.model;
              
-              connection.demoBuildMetrics.server.getDemoBuildMetrics().done(function(stats) {
+              connection.demoBuildMetrics.server.getModel().done(function(stats) {
                   model.updateFromData(stats);
               });                    
           }

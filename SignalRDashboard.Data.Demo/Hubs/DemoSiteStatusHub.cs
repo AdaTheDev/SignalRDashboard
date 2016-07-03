@@ -12,10 +12,5 @@ namespace SignalRDashboard.Data.Demo.Hubs
             DemoSiteStatusPoller.Instance)
         {
         }
-
-        public SiteStatus[] GetDemoSiteStatus()
-        {
-            return Model.GetSites;
-        }
     }
 }

@@ -36,7 +36,7 @@
           initialiseData: function(connection) {
               var model = this.model;
              
-              connection.demoSiteStatus.server.getDemoSiteStatus().done(function(stats) {
+              connection.demoSiteStatus.server.getModel().done(function(stats) {
                   updateModelArray(model, stats);
               });                    
           }

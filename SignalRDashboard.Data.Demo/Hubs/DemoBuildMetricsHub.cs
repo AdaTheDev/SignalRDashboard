@@ -13,10 +13,5 @@ namespace SignalRDashboard.Data.Demo.Hubs
                   DemoBuildMetricsPoller.Instance)
         {
         }
-
-        public BuildMetrics GetDemoBuildMetrics()
-        {
-            return Model;
-        }
     }
 }
