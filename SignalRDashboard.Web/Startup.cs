@@ -41,7 +41,7 @@ namespace SignalRDashboard.Web
             return new HashSet<Assembly>(AppDomain
                 .CurrentDomain
                 .GetAssemblies()
-                .SelectMany(assembly => assembly.GetTypes())
+                .SelectMany(assembly => assembly.GetTypesSafely())
                 .Where(type => typeof (DashboardHubModel).IsAssignableFrom(type))
                 .Select(type => type.Assembly)
                 .Distinct());

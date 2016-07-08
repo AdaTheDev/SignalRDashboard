@@ -217,6 +217,7 @@
     <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\MediaController.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Utilities\AssemblyExtensions.cs" />
     <Compile Include="Utilities\DirectoryFileCache.cs" />
     <Compile Include="Utilities\FilePathToUrlConverter.cs" />
     <Compile Include="Utilities\FilteredCamelCasePropertyNamesContractResolver.cs" />
