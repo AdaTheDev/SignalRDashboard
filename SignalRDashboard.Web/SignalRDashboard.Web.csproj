@@ -237,8 +237,17 @@
     <Content Include="Content\Custom.css" />
     <Content Include="Content\Demo.css" />
     <Content Include="Content\Sounds\DemoBuildMetrics\Success\SmallCrowdApplause.mp3" />
-    <Content Include="Scripts\angular2-beta0\es6-shim.min.js" />
-    <Content Include="Scripts\app\components\AppComponent.js" />
+    <Content Include="Scripts\angular2\common.umd.min.js" />
+    <Content Include="Scripts\angular2\compiler.umd.min.js" />
+    <Content Include="Scripts\angular2\core.umd.min.js" />
+    <Content Include="Scripts\angular2\platform-browser-dynamic.umd.min.js" />
+    <Content Include="Scripts\angular2\platform-browser.umd.min.js" />
+    <Content Include="Scripts\angular2\Reflect.js" />
+    <Content Include="Scripts\angular2\Rx.min.js" />
+    <Content Include="Scripts\angular2\shim.min.js" />
+    <Content Include="Scripts\angular2\zone.js" />
+    <Content Include="Scripts\app\DashboardModule.js" />
+    <Content Include="Scripts\app\components\DashboardComponent.js" />
     <Content Include="Scripts\app\components\core\ConnectedUsersComponent.js" />
     <Content Include="Scripts\app\components\demo\BuildMetricsComponent.js" />
     <Content Include="Scripts\app\components\demo\SiteStatisticsComponent.js" />
@@ -262,9 +271,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Scripts\angular2-beta0\angular2-all.umd.dev.js" />
-    <Content Include="Scripts\angular2-beta0\angular2-polyfills.js" />
-    <Content Include="Scripts\angular2-beta0\Rx.umd.js" />
     <None Include="Properties\PublishProfiles\FIleSystem.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\app\dashboard.js" />
@@ -310,6 +316,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\Sounds\DemoBuildMetrics\Error\" />
+    <Folder Include="ViewModels\" />
     <Folder Include="Views\Media\" />
   </ItemGroup>
   <ItemGroup>

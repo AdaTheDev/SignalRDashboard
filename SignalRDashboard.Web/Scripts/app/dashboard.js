@@ -29,7 +29,13 @@
         }
     };   
 
-    document.addEventListener("DOMContentLoaded", function() {                             
-        ng.platform.browser.bootstrap(signalrdashboard.AppComponent);        
-    }); 
+    document.addEventListener('DOMContentLoaded', function() {
+        ng.platformBrowserDynamic
+        .platformBrowserDynamic()
+        .bootstrapModule(signalrdashboard.DashboardModule);
+      });
+
+    //document.addEventListener("DOMContentLoaded", function() {                             
+    //    ng.platform.browser.bootstrap(signalrdashboard.AppComponent);        
+    //}); 
 })(window.signalrdashboard || (window.signalrdashboard = {}));
